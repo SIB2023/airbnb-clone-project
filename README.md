@@ -23,4 +23,19 @@ Solves any technical problems emerging during the development lifecycle
 "Test automation engineer"
 Writes and maintains test scripts for automated testing
 
+Technology Stack:
 
+HTML5:
+it's a scripting language we use to structure the webpage
+CSS3:
+it's a styling technology we use to color and design HTML pages
+Shell Scripting:
+we use it to automate tasks and streamline workflows within a command-line environment
+JavaScript:
+it's a programming language we use to add functionality to our web application
+Python:
+python is a multi-use programming language to build web apps or use it's most common framework(django) to build web or mobile applications
+Django:
+Django is a free and open-source web framework written in Python. It is designed to facilitate the rapid development of secure and maintainable websites and web applications
+Databases:
+A database is an organized collection of data, stored and accessed electronically. It's a system for storing, managing, and retrieving information.
