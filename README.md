@@ -3,39 +3,173 @@ it's an airbnb clone project for ALX program
 
 // we will learn too many concepts in this project such as Api's and back end technologies, as well as Django and Advanced Python and JS 
 
+Airbnb Clone Project
+Team Roles
 
-Team Roles:
-in this project we will need a
-"Business analyst"
-who will translate customer's business needs into requirements
-"product Manager" who is going to make sure the project or parts of it is delivered on time, and within budget
-"UI/UX Designer" Creates user journeys for the best user experience and highest conversion rates
+Backend Developer
+Responsible for building and maintaining the server-side logic of the application. Implements APIs, manages authentication/authorization, and ensures business logic is correctly applied.
 
-"Software architect"
-Designs a high-level software architecture
-Sets up code quality standards and performs code reviews
+Frontend Developer
+Focuses on designing and coding the client-side of the application, creating responsive UI/UX for users to interact with the platform.
 
-"Software developer"
-Engineers and stabilizes the product
+Database Administrator (DBA)
+Manages the database, ensuring its design, security, performance, and availability. Responsible for backups, scaling, and tuning queries.
 
-Solves any technical problems emerging during the development lifecycle
+DevOps Engineer
+Sets up and maintains CI/CD pipelines, manages cloud infrastructure, deployment processes, and system monitoring.
 
-"Test automation engineer"
-Writes and maintains test scripts for automated testing
+QA Engineer
+Ensures the quality of the application through testing (manual and automated), identifying bugs, and verifying fixes.
 
-Technology Stack:
+Project Manager
+Coordinates tasks across the team, manages timelines, and ensures deliverables meet project requirements.
 
-HTML5:
-it's a scripting language we use to structure the webpage
-CSS3:
-it's a styling technology we use to color and design HTML pages
-Shell Scripting:
-we use it to automate tasks and streamline workflows within a command-line environment
-JavaScript:
-it's a programming language we use to add functionality to our web application
-Python:
-python is a multi-use programming language to build web apps or use it's most common framework(django) to build web or mobile applications
-Django:
-Django is a free and open-source web framework written in Python. It is designed to facilitate the rapid development of secure and maintainable websites and web applications
-Databases:
-A database is an organized collection of data, stored and accessed electronically. It's a system for storing, managing, and retrieving information.
+Technology Stack
+
+Django
+A Python-based web framework used to build RESTful APIs and handle backend logic.
+
+PostgreSQL
+A relational database system used to store and manage structured data such as users, bookings, and payments.
+
+GraphQL
+A query language for APIs that allows clients to request specific data, improving efficiency and flexibility.
+
+React (optional frontend)
+A JavaScript library for building dynamic user interfaces.
+
+Docker
+Used for containerization, ensuring the application runs consistently across different environments.
+
+GitHub Actions
+A tool for automating workflows like testing and deploying through CI/CD pipelines.
+
+Database Design
+
+Key Entities & Fields
+
+Users
+
+id (Primary Key)
+
+name
+
+email
+
+password_hash
+
+role (guest, host, admin)
+
+Properties
+
+id
+
+user_id (foreign key → Users)
+
+title
+
+description
+
+location
+
+price_per_night
+
+Bookings
+
+id
+
+user_id (foreign key → Users)
+
+property_id (foreign key → Properties)
+
+check_in
+
+check_out
+
+Reviews
+
+id
+
+user_id (foreign key → Users)
+
+property_id (foreign key → Properties)
+
+rating
+
+comment
+
+Payments
+
+id
+
+booking_id (foreign key → Bookings)
+
+amount
+
+status
+
+payment_date
+
+Relationships:
+
+A user can own multiple properties.
+
+A property can have multiple bookings.
+
+A booking belongs to one property and one user.
+
+A user can leave multiple reviews, but each review is tied to one property.
+
+A payment is associated with one booking.
+
+Feature Breakdown
+
+User Management
+Handles user registration, login, authentication, and profile management. Provides role-based access (host vs. guest).
+
+Property Management
+Hosts can list, update, or remove properties. Includes property details like location, pricing, and availability.
+
+Booking System
+Guests can book properties, view reservations, and manage cancellations. Ensures availability tracking.
+
+Review System
+Guests can leave reviews and ratings on properties they’ve stayed in. Reviews help maintain trust in the platform.
+
+Payment System
+Securely processes guest payments for bookings, and ensures hosts are compensated.
+
+API Security
+
+Authentication
+Ensures only registered users can access APIs. Commonly implemented with JWT (JSON Web Tokens).
+
+Authorization
+Restricts users to actions allowed by their role (e.g., only hosts can add properties).
+
+Rate Limiting
+Protects against abuse by limiting the number of API requests per user in a given timeframe.
+
+Data Encryption
+Protects sensitive user information (passwords, payment info) both in transit (HTTPS) and at rest.
+
+Why Security Matters:
+
+Protects user data from breaches.
+
+Ensures safe financial transactions.
+
+Maintains trust in the platform.
+
+CI/CD Pipeline
+
+What it is:
+CI/CD (Continuous Integration/Continuous Deployment) automates the process of building, testing, and deploying the application. It ensures rapid delivery of new features with minimal errors.
+
+Tools we can use:
+
+GitHub Actions → automate testing, linting, deployment.
+
+Docker → containerize the app for consistent environments.
+
+Kubernetes (optional) → orchestration for scaling services.electronically. It's a system for storing, managing, and retrieving information.
