@@ -183,3 +183,39 @@ GitHub Actions → automate testing, linting, deployment.
 Docker → containerize the app for consistent environments.
 
 Kubernetes (optional) → orchestration for scaling services.electronically. It's a system for storing, managing, and retrieving information.
+
+
+
+
+
+# SQL Joins Queries
+
+This project demonstrates different types of SQL joins for the **alx-airbnb-database** project.
+
+## Queries
+
+### 1. INNER JOIN
+Retrieves all bookings with the respective users who made those bookings.  
+This only shows records where a booking has a matching user.
+
+### 2. LEFT JOIN
+Retrieves all properties and their reviews, including properties that have no reviews.  
+This ensures all properties are displayed, even if no review exists for them.
+
+### 3. FULL OUTER JOIN
+Retrieves all users and all bookings, even if:
+- A user has no booking.
+- A booking is not linked to a user.  
+
+
+
+
+
+
+
+
+
+
+
+
+
